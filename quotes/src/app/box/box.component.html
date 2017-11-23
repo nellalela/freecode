@@ -1,0 +1,28 @@
+<div class="container-fluid" id="background">
+
+  <div class="row d-flex justify-content-center">
+    <div class="container" id="quote">
+      <div class="col-md-6 col-sm-12 text-left">
+          <i class="fa fa-quote-left"> </i><span id="text"></span>
+        <h1>{{quote?.quote}}</h1>
+        
+      </div>
+      <div class="row d-flex align-items-center justify-content-center boxi"> 
+          <div class="col-md-6 col-sm-12">
+            <p> ~ {{quote?.author.toUpperCase()}}</p>
+          </div>
+        </div>
+    </div>
+    
+  </div>
+  <div class="container-fluid actions">
+      <div class=" icon row d-flex align-items-center justify-content-around">
+        <a href="https://twitter.com/intent/tweet?text={{quote?.quote}}%20{{quote?.author}}&hashtags=quotes" ><i class="fa fa-twitter fa-2x tuit"></i></a>
+        <button (click)="getQuote()" type="button" class="btn">More quotes</button>
+      </div>
+           
+
+</div>
+
+    </div>
+    
