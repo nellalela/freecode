@@ -10,7 +10,8 @@
 </div>
 <div class= 'container col text-center weather'>
     <h2>{{data?.name}}, {{data?.sys.country}}.</h2>
-    <h4 id="temp">min: {{data?.main.temp_min}} °<a href='#' (click)="fahrenheit()">C</a> - max: {{data?.main.temp_max}} °<a href='#' (click)="fahrenheit()">C</a>
+    <h4 id='temp'> Actual: {{data?.main.temp}} °<a href='#' (click)="fahrenheit()">C</a> <br>
+    min: {{data?.main.temp_min}} °<a href='#' (click)="fahrenheit()">C</a> - max: {{data?.main.temp_max}} °<a href='#' (click)="fahrenheit()">C</a>
     </h4>
     <h4>{{data?.weather[0].main}}
     </h4>

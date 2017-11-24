@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
   place= {};
   fmin: number;
   fmax: number;
+  tem: number;
+  scale: any;
 
   constructor ( private  http: Http){}
 
@@ -31,9 +33,10 @@ export class AppComponent implements OnInit {
 
   }
   fahrenheit(){
+    this.tem = this.data.main.temp * 1.8 + 32;
     this.fmin = this.data.main.temp_min * 1.8 + 32;
     this.fmax = this.data.main.temp_max * 1.8 + 32;
-    document.getElementById("temp").innerHTML= "min: " + this.fmin + "°F - max: " + this.fmax + "°F";
+    document.getElementById("temp").innerHTML= "Actual: " + this.tem + " °F "+ "<br>"+ "min: " + this.fmin + " °F - max: " + this.fmax + " °F";
   }
 
   celsius(){
