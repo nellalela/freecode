@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+    <div class="container header">
+        <div class="row">
+            <div class="col text-center">
+            <h1>Free C<i class="fa fa-cloud"></i>de Camp </h1>
+            <h1>Weather App</h1>
+          
+    </div>
+</div>
+</div>
+<div class= 'container col text-center weather'>
+    <h2>{{data?.name}}, {{data?.sys.country}}.</h2>
+    <h4 id="temp">min: {{data?.main.temp_min}} °<a href='#' (click)="fahrenheit()">C</a> - max: {{data?.main.temp_max}} °<a href='#' (click)="fahrenheit()">C</a>
+    </h4>
+    <h4>{{data?.weather[0].main}}
+    </h4>
+    <img src="{{data?.weather[0].icon}}">
+</div>
+
+
+
+<router-outlet></router-outlet>
