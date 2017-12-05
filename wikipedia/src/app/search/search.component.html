@@ -1,0 +1,22 @@
+
+<div class='container content d-block'>
+  <div class='row'>
+    <div class=' col'>
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Ilkwikiuygulamam.png">
+</div></div>
+<div class='row bt'>
+    <div class=' col'>
+<a class="btn btn-warning" href="https://en.wikipedia.org/wiki/Special:Random" role="button">Random Entry</a>
+</div></div>
+<div class=" row input-group">
+    
+    
+    <input #box (keyup.enter)="search(box.value)" type="text" class="form-control" placeholder="Search for..."> 
+    <span class="fa fa-search"></span>
+  </div> 
+  <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12" *ngFor="let p of pag">
+        <app-result [title]="p.title" [description]="p.extract" [url]="p.fullurl"></app-result>
+      </div>
+    </div>
+</div>
